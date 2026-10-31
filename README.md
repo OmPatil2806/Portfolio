@@ -74,19 +74,21 @@ that is the number with an image attached, so update it if you add or remove one
 
 ### Dashboard screenshots — `assets/img/projects/`
 
-Optional. Each case study has a slot for three screenshots. Add them at these paths and
-they appear automatically:
+Only the most important views are shown — two per project (one for Smart Grid), taken from
+each project's own GitHub repo. Click any screenshot to open it full size (same lightbox as
+the certificates).
 
-```
-assets/img/projects/rf-failure-rca-1.png   … -2.png   … -3.png
-assets/img/projects/log-analyzer-1.png     … -2.png   … -3.png
-assets/img/projects/dataguard-ai-1.png     … -2.png   … -3.png
-assets/img/projects/iot-platform-1.png     … -2.png   … -3.png
-assets/img/projects/fincast-1.png          … -2.png   … -3.png
-assets/img/projects/multi-store-1.png      … -2.png   … -3.png
-assets/img/projects/smart-grid-1.png       (actual vs predicted)
-assets/img/projects/fitness-coach-1.png    … -2.png   … -3.png
-```
+| Page | `-1.png` | `-2.png` |
+|---|---|---|
+| RF Failure RCA | Diagnosis card | Knowledge graph |
+| Log Analyzer | Trip diagnosis | Diagnosis report |
+| DataGuard AI | Overview | Incidents |
+| IoT Platform | Fleet overview | Maintenance planner |
+| FinCast | Forecast | What-If simulator |
+| Smart Grid | Actual vs predicted | — |
+
+AI Fitness Coach and Multi-Store have no Dashboard section yet (no screenshots exist in
+their repos). To add one, copy the markup of the Dashboard section from `fincast.html`.
 
 ### Code — `assets/`
 

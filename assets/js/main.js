@@ -133,7 +133,7 @@
     box.className = 'lightbox';
     box.setAttribute('role', 'dialog');
     box.setAttribute('aria-modal', 'true');
-    box.setAttribute('aria-label', 'Certificate preview');
+    box.setAttribute('aria-label', 'Image preview');
     box.setAttribute('hidden', '');
     box.innerHTML =
       '<button class="lightbox__close" type="button" aria-label="Close preview">' +
