@@ -19,7 +19,6 @@ Deploy by pushing the contents of this folder to a GitHub Pages branch (or `/doc
 | `fincast.html` | Case study — FinCast |
 | `multi-store.html` | Case study — Multi-Store Management System |
 | `smart-grid.html` | Case study — Smart Grid Electric Load Forecasting |
-| `fitness-coach.html` | Case study — AI Fitness Coach |
 | `research.html` | Research & Certifications |
 | `contact.html` | Contact — link cards only, no form |
 
@@ -87,8 +86,7 @@ the certificates).
 | FinCast | Forecast | What-If simulator |
 | Smart Grid | Actual vs predicted | — |
 
-AI Fitness Coach and Multi-Store have no Dashboard section yet (no screenshots exist in
-their repos). To add one, copy the markup of the Dashboard section from `fincast.html`.
+Multi-Store has no Dashboard section yet (no screenshots exist in its repo). To add one, copy the markup of the Dashboard section from `fincast.html`.
 
 ### Code — `assets/`
 
