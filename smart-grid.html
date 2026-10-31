@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Grid Electric Load Forecasting — Om Patil</title>
+<meta name="description" content="A three-layer LSTM compared against a feedforward baseline on Kaggle hourly electricity-consumption data, with exploratory analysis of daily, weekly and temperature patterns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html" aria-label="Om Patil — home">
+      <span class="logo__mark" aria-hidden="true">OP</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="projects.html" aria-current="page">Projects</a>
+      <a class="nav__link" href="research.html">Research</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--ghost btn--sm" href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <a class="mobile-menu__link" href="index.html">Home</a>
+  <a class="mobile-menu__link" href="about.html">About</a>
+  <a class="mobile-menu__link" href="projects.html" aria-current="page">Projects</a>
+  <a class="mobile-menu__link" href="research.html">Research</a>
+  <a class="mobile-menu__link" href="contact.html">Contact</a>
+  <div class="mobile-menu__btns">
+    <a class="btn btn--ghost" href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn btn--ghost" href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs reveal" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span>
+        <a href="projects.html">Projects</a><span aria-hidden="true">/</span>
+        <span>Smart Grid Electric Load Forecasting</span>
+      </nav>
+      <div class="cs-head reveal">
+        <div class="badge-row" style="margin-bottom:24px"><span class="badge">Public data</span></div>
+        <h1>Smart Grid Electric Load Forecasting</h1>
+        <p class="cs-head__headline">Forecasts hourly electricity demand with LSTM networks.</p>
+        <ul class="metrics"><li class="metric"><b>LSTM</b> vs feedforward baseline</li><li class="metric"><b>128-64-32</b> LSTM units</li><li class="metric"><b>MAE and MSE</b> evaluation</li></ul>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn btn--ghost" href="https://github.com/OmPatil2806/Smart-Grid-Electric-Load-Forecasting-Using-Deep-Learning" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-top:72px">
+    <figure class="diagram reveal"><svg viewBox="0 0 1582 150" role="img" aria-label="Stacked LSTM with dropout after each layer, from raw series to an hourly forecast" preserveAspectRatio="xMinYMid meet"><rect x="0" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="84.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">Data</text><text x="10" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">01</text><line x1="174" y1="74.0" x2="192" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M192 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="202" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="286.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">Scaling</text><text x="212" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">02</text><line x1="376" y1="74.0" x2="394" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M394 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="404" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="488.0" y="70.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">Sequences</text><text x="488.0" y="88.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">(24-step)</text><text x="414" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">03</text><line x1="578" y1="74.0" x2="596" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M596 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="606" y="38" width="168" height="72" rx="8" fill="rgba(184,15,45,0.06)" stroke="#B80F2D" stroke-width="1.8"/><text x="690.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="600" fill="#B80F2D">LSTM 128</text><text x="616" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">04</text><line x1="780" y1="74.0" x2="798" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M798 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="808" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="892.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">LSTM 64</text><text x="818" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">05</text><line x1="982" y1="74.0" x2="1000" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M1000 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="1010" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="1094.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">LSTM 32</text><text x="1020" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">06</text><line x1="1184" y1="74.0" x2="1202" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M1202 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="1212" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="1296.0" y="70.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">Dense</text><text x="1296.0" y="88.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">output</text><text x="1222" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">07</text><line x1="1386" y1="74.0" x2="1404" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M1404 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="1414" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="1498.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">Forecast</text><text x="1424" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">08</text></svg><figcaption>Stacked LSTM with dropout after each layer, from raw series to an hourly forecast</figcaption></figure>
+  </div>
+
+<section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Problem</h2><div class="prose" style="max-width:none"><p>Accurate load forecasts support grid reliability, energy planning and demand planning. Getting the next hours right is what lets an operator schedule generation instead of reacting to it.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Data</h2><div class="prose" style="max-width:none"><div class="spec"><div class="spec__row"><div class="spec__k">Source</div><div class="spec__v">Kaggle <b>&ldquo;Hourly Load Consumption Data&rdquo;</b> — an hourly time series.</div></div><div class="spec__row"><div class="spec__k">Input window</div><div class="spec__v"><b>24-step</b> sequences.</div></div></div><p><strong>EDA views:</strong> 7-day rolling load trend, average load by hour, weekday versus weekend distribution, and load against temperature.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Approach</h2><div class="prose" style="max-width:none"><ul><li>Preprocessing, feature scaling and sequence windows with a 24-step input.</li><li>A feedforward neural network as the baseline to beat.</li><li>A stacked LSTM — <b>128, 64 and 32 units</b>, dropout after each layer, single dense output.</li><li>Evaluated with MAE and MSE, followed by an actual versus predicted chart.</li></ul></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Results</h2><div class="prose" style="max-width:none"><div class="note"><div class="note__k">Status</div><p>Numeric results are <b>not published yet</b>. There is no score to report here, and none is implied by the chart-free layout of this page.</p></div><p><strong>Planned next:</strong> hyperparameter tuning, weather and calendar features, real-time forecasting, and a Streamlit or Flask deployment.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Limitations<br>&amp; honest notes</h2><div class="prose" style="max-width:none"><ul><li>No published metrics yet — the model is evaluated with MAE and MSE, but the numbers are not final.</li><li>No weather or calendar features in the current version.</li><li>Not deployed; it runs in a Jupyter notebook.</li></ul></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Stack</h2><div class="prose" style="max-width:none"><div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Jupyter Notebook</span></div></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Dashboard</h2><div class="prose" style="max-width:none"><div class="shots reveal"><div class="shot"><span class="shot__ph">Actual vs predicted<br>assets/img/projects/smart-grid-1.png</span></div></div><p class="mono" style="font-size:11.5px;color:var(--muted);margin-top:18px">Screenshot slots — drop the files in at the paths shown.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Links</h2><div class="prose" style="max-width:none"><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--solid" href="https://github.com/OmPatil2806/Smart-Grid-Electric-Load-Forecasting-Using-Deep-Learning" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Repository</a></div></div></div></div></section>
+  <nav class="pager" aria-label="Project navigation">
+    <a class="pager__item" href="multi-store.html"><div class="pager__k">Previous</div><div class="pager__t">Multi-Store Management System</div></a>
+    <a class="pager__item pager__item--next" href="fitness-coach.html"><div class="pager__k">Next</div><div class="pager__t">AI Fitness Coach</div></a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__word">Om Patil<br><span>AI Engineer &amp; Data Scientist</span></p>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul class="footer__list">
+          <li><a href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:ompatil24@zohomail.in">ompatil24@zohomail.in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Based in</h4>
+        <ul class="footer__list">
+          <li><span>Neckarsulm, Germany</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Personal portfolio. Not affiliated with AUDI AG.</span>
+      <span>&copy; <span data-year>2026</span> Om Patil</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

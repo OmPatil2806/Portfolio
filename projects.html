@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Om Patil</title>
+<meta name="description" content="Eight selected machine learning and data engineering projects by Om Patil — root cause analysis, log anomaly detection, data quality monitoring, industrial IoT analytics, load and finance forecasting, a full-stack store system and a health analytics app. 50+ more projects on GitHub.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html" aria-label="Om Patil — home">
+      <span class="logo__mark" aria-hidden="true">OP</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="projects.html" aria-current="page">Projects</a>
+      <a class="nav__link" href="research.html">Research</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--ghost btn--sm" href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <a class="mobile-menu__link" href="index.html">Home</a>
+  <a class="mobile-menu__link" href="about.html">About</a>
+  <a class="mobile-menu__link" href="projects.html" aria-current="page">Projects</a>
+  <a class="mobile-menu__link" href="research.html">Research</a>
+  <a class="mobile-menu__link" href="contact.html">Contact</a>
+  <div class="mobile-menu__btns">
+    <a class="btn btn--ghost" href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn btn--ghost" href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero page-hero--split">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="label">Selected work</p>
+        <h1>Projects</h1>
+        <p class="lede" style="margin-bottom:20px">Eight selected projects. 50+ more are on GitHub.</p>
+        <p class="lede">Each one takes raw operational data through a pipeline, a model and an explanation, to something a person can act on. The numbers below are measured, and the honest limits are written on every case study.</p>
+      </div>
+      <figure class="page-hero__art reveal">
+        <img src="assets/img/projects-ai.jpg" alt="" aria-hidden="true" width="1100" height="1100" loading="eager" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="filters reveal" data-filters role="group" aria-label="Filter projects by category">
+        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-filter="anomaly" aria-pressed="false">Anomaly Detection</button>
+        <button class="filter" type="button" data-filter="forecasting" aria-pressed="false">Forecasting</button>
+        <button class="filter" type="button" data-filter="data-engineering" aria-pressed="false">Data Engineering</button>
+        <button class="filter" type="button" data-filter="full-stack" aria-pressed="false">Full-Stack</button>
+      </div>
+
+      <p class="mono" style="color:var(--muted);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:32px" aria-live="polite" data-filter-count>8 projects</p>
+
+      <div class="project-grid" data-project-grid>
+
+        <!-- 01 -->
+        <article class="card reveal" data-category="anomaly">
+          <div class="card__top">
+            <span class="card__index">01</span>
+            <span class="badge">Public benchmark data</span>
+          </div>
+          <h3><a class="card__link" href="rf-failure-rca.html">RF Failure Root Cause Analysis</a></h3>
+          <p class="card__headline">Predicts the failure, explains why, and ranks the repair.</p>
+          <p class="card__desc">Six-layer ML pipeline over three public benchmark datasets mapped to one RF parameter schema. XGBoost and a PyTorch 1D-CNN predict failure, SHAP and GradCAM explain it, and a 42-node knowledge graph turns the explanation into ranked P1/P2/P3 repair actions.</p>
+          <ul class="metrics">
+            <li class="metric"><b>F1 0.959</b> tuned XGBoost, CMAPSS</li>
+            <li class="metric"><b>160,359</b> sensor rows</li>
+            <li class="metric"><b>5-page</b> Streamlit dashboard</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">XGBoost</span><span class="tag">PyTorch</span><span class="tag">SHAP</span><span class="tag">MLflow</span><span class="tag">NetworkX</span><span class="tag">Streamlit</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/AI-Driven-RF-Component-Failure-Root-Cause-Analysis-Diagnosis-System" target="_blank" rel="noopener noreferrer" aria-label="RF Failure Root Cause Analysis on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="card reveal" data-category="anomaly">
+          <div class="card__top">
+            <span class="card__index">02</span>
+            <span class="badge">Real logs + injected faults</span>
+          </div>
+          <h3><a class="card__link" href="log-analyzer.html">Automotive Diagnostic Log Analyzer</a></h3>
+          <p class="card__headline">Flags a developing fault in OBD-II logs before the fault code appears.</p>
+          <p class="card__desc">Isolation Forest plus a range score per subsystem, with root-cause attribution, vehicle health scoring and PDF/HTML/JSON reports. Normal behaviour is learned from real Vehicle Energy Dataset logs; six faults were injected to evaluate on unseen trips.</p>
+          <ul class="metrics">
+            <li class="metric"><b>90%</b> faulty trips detected</li>
+            <li class="metric"><b>7.5%</b> false alarms</li>
+            <li class="metric"><b>F1 0.87</b></li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">Plotly</span><span class="tag">Streamlit</span><span class="tag">ReportLab</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/Automative-Diagnostic--log-analyzer" target="_blank" rel="noopener noreferrer" aria-label="Automotive Diagnostic Log Analyzer on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="card reveal" data-category="data-engineering">
+          <div class="card__top">
+            <span class="card__index">03</span>
+            <div class="badge-row">
+              <span class="badge badge--dev">In development</span>
+              <span class="badge">Real data + injected faults</span>
+            </div>
+          </div>
+          <h3><a class="card__link" href="dataguard-ai.html">DataGuard AI</a></h3>
+          <p class="card__headline">Catches bad data before it reaches a decision, and says what broke and since when.</p>
+          <p class="card__desc">Medallion pipeline on DuckDB (Bronze, Silver, Quarantine, Gold) with a rule engine, PSI drift checks, Isolation Forest and an incident workflow with evidence packs. Suggested actions always wait for human approval.</p>
+          <ul class="metrics">
+            <li class="metric"><b>22 of 24</b> root causes ranked first (taxi)</li>
+            <li class="metric"><b>22.4M</b> rows in 84 s</li>
+            <li class="metric"><b>12</b> fault types</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">DuckDB</span><span class="tag">Pandera</span><span class="tag">pyarrow</span><span class="tag">scikit-learn</span><span class="tag">pytest</span><span class="tag">GitHub Actions</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/DataGuard-AI-Intelligent-Data-Quality-Monitoring" target="_blank" rel="noopener noreferrer" aria-label="DataGuard AI on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 04 -->
+        <article class="card reveal" data-category="data-engineering">
+          <div class="card__top">
+            <span class="card__index">04</span>
+            <span class="badge">Synthetic data</span>
+          </div>
+          <h3><a class="card__link" href="iot-platform.html">Industrial IoT Sensor Analytics Platform</a></h3>
+          <p class="card__headline">From raw sensor readings to a 24-hour failure warning and a maintenance plan.</p>
+          <p class="card__desc">Bronze, Silver and Gold layers, a DuckDB star schema, three tracked models and a cost-based alert threshold, run end to end with one command.</p>
+          <ul class="metrics">
+            <li class="metric"><b>166 of 171</b> failures caught (rule baseline: 43)</li>
+            <li class="metric"><b>876,100</b> sensor rows</li>
+            <li class="metric"><b>459</b> tests</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">DuckDB</span><span class="tag">PyArrow</span><span class="tag">scikit-learn</span><span class="tag">MLflow</span><span class="tag">Altair</span><span class="tag">pytest</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/Industrial-IoT-Sensor-Analytics-Platform-" target="_blank" rel="noopener noreferrer" aria-label="Industrial IoT Sensor Analytics Platform on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="card reveal" data-category="forecasting">
+          <div class="card__top">
+            <span class="card__index">05</span>
+            <span class="badge">Synthetic data</span>
+          </div>
+          <h3><a class="card__link" href="fincast.html">FinCast</a></h3>
+          <p class="card__headline">Forecasts next month's income, spending and balance, with a range instead of a single guess.</p>
+          <p class="card__desc">LightGBM forecasts with 10-90% quantile intervals, validated by rolling-origin backtesting, plus auto-categorisation, anomaly alerts, a what-if simulator and savings goals.</p>
+          <ul class="metrics">
+            <li class="metric"><b>6.9%</b> lower MAE than best baseline</li>
+            <li class="metric"><b>85%</b> of actuals inside the range</li>
+            <li class="metric"><b>289</b> tests, 92% coverage</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">LightGBM</span><span class="tag">statsmodels</span><span class="tag">MLflow</span><span class="tag">SQLite</span><span class="tag">Streamlit</span><span class="tag">Plotly</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/FinCast-Predict-Your-Next-Month-s-Income-Spending-and-Balance" target="_blank" rel="noopener noreferrer" aria-label="FinCast on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 06 -->
+        <article class="card reveal" data-category="full-stack">
+          <div class="card__top">
+            <span class="card__index">06</span>
+            <span class="badge">Full-stack application</span>
+          </div>
+          <h3><a class="card__link" href="multi-store.html">Multi-Store Management System</a></h3>
+          <p class="card__headline">One owner login, three stores, no more notebooks.</p>
+          <p class="card__desc">Multi-tenant FastAPI and React app for an owner of three stores (grocery, clothing, electronics) with separate employee logins, stock, sales and payroll in one place. Runs locally on the store network.</p>
+          <ul class="metrics">
+            <li class="metric"><b>2</b> roles</li>
+            <li class="metric"><b>3</b> stores</li>
+            <li class="metric"><b>Salaries hidden</b> at API level</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">FastAPI</span><span class="tag">SQLAlchemy</span><span class="tag">JWT</span><span class="tag">React</span><span class="tag">Tailwind v4</span><span class="tag">Recharts</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/multi-store-management-system" target="_blank" rel="noopener noreferrer" aria-label="Multi-Store Management System on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 07 -->
+        <article class="card reveal" data-category="forecasting">
+          <div class="card__top">
+            <span class="card__index">07</span>
+            <span class="badge">Public data</span>
+          </div>
+          <h3><a class="card__link" href="smart-grid.html">Smart Grid Electric Load Forecasting</a></h3>
+          <p class="card__headline">Forecasts hourly electricity demand with LSTM networks.</p>
+          <p class="card__desc">A three-layer LSTM (128, 64 and 32 units with dropout) compared against a feedforward baseline on Kaggle hourly electricity-consumption data, with exploratory analysis of daily, weekly and temperature patterns and an actual-vs-predicted forecast view.</p>
+          <ul class="metrics">
+            <li class="metric"><b>LSTM</b> vs feedforward baseline</li>
+            <li class="metric"><b>128-64-32</b> LSTM units</li>
+            <li class="metric"><b>MAE and MSE</b> evaluation</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Jupyter Notebook</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <a class="icon-link" href="https://github.com/OmPatil2806/Smart-Grid-Electric-Load-Forecasting-Using-Deep-Learning" target="_blank" rel="noopener noreferrer" aria-label="Smart Grid Electric Load Forecasting on GitHub">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 08 -->
+        <article class="card reveal" data-category="full-stack forecasting">
+          <div class="card__top">
+            <span class="card__index">08</span>
+            <span class="badge">Synthetic data</span>
+          </div>
+          <h3><a class="card__link" href="fitness-coach.html">AI Fitness Coach</a></h3>
+          <p class="card__headline">Tracks workouts and calories, and forecasts your weight 30 days ahead.</p>
+          <p class="card__desc">An eight-page Streamlit health analytics app with workout and calorie tracking, body metrics (fitness score, BMI, health age), a Ridge Regression weight forecast, a Gradient Boosting calorie-burn estimator and a rule-based coach chatbot that needs no API key.</p>
+          <ul class="metrics">
+            <li class="metric"><b>~0.29 kg</b> weight forecast MAE</li>
+            <li class="metric"><b>~32 kcal</b> calorie-burn MAE</li>
+            <li class="metric"><b>8</b> pages</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Streamlit</span><span class="tag">SQLite</span><span class="tag">scikit-learn</span><span class="tag">Plotly</span><span class="tag">Pandas</span><span class="tag">Joblib</span>
+          </div>
+          <div class="card__foot">
+            <span class="tlink" aria-hidden="true">Read case study <span class="arr">→</span></span>
+            <div style="display:flex;align-items:center;gap:10px;position:relative;z-index:2">
+              <a class="btn btn--ghost btn--sm" href="https://ai-fitness-coach-hecmm6xp8tjvtqt83ihwtg.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+                Live demo
+              </a>
+              <a class="icon-link" href="https://github.com/OmPatil2806/AI-Fitness-Coach" target="_blank" rel="noopener noreferrer" aria-label="AI Fitness Coach on GitHub">
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="cta reveal">
+        <div>
+          <h3>50+ more projects on GitHub</h3>
+          <p>The eight above are written up in depth. The rest of the work lives on the profile.</p>
+        </div>
+        <a class="btn btn--solid" href="https://github.com/OmPatil2806?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          Browse all repositories
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div class="marquee marquee--reverse marquee--proof" aria-label="Selected results">
+  <div class="marquee__track">
+    <div class="marquee__group">
+      <span class="marquee__item">92% root cause ranked first</span><span class="marquee__item">22.4M rows in 84 s</span><span class="marquee__item">F1 0.87 on unseen trips</span><span class="marquee__item">166 of 171 failures caught</span><span class="marquee__item">459 tests</span><span class="marquee__item">289 tests, 92% coverage</span><span class="marquee__item">F1 0.959 tuned XGBoost</span>
+    </div>
+    <div class="marquee__group marquee__group--dupe" aria-hidden="true">
+      <span class="marquee__item">92% root cause ranked first</span><span class="marquee__item">22.4M rows in 84 s</span><span class="marquee__item">F1 0.87 on unseen trips</span><span class="marquee__item">166 of 171 failures caught</span><span class="marquee__item">459 tests</span><span class="marquee__item">289 tests, 92% coverage</span><span class="marquee__item">F1 0.959 tuned XGBoost</span>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__word">Om Patil<br><span>AI Engineer &amp; Data Scientist</span></p>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul class="footer__list">
+          <li><a href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:ompatil24@zohomail.in">ompatil24@zohomail.in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Based in</h4>
+        <ul class="footer__list">
+          <li><span>Neckarsulm, Germany</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Personal portfolio. Not affiliated with AUDI AG.</span>
+      <span>&copy; <span data-year>2026</span> Om Patil</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

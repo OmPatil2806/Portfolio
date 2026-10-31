@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-Store Management System — Om Patil</title>
+<meta name="description" content="Multi-tenant FastAPI and React app for an owner of three stores, with separate employee logins, stock, sales and payroll in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="index.html" aria-label="Om Patil — home">
+      <span class="logo__mark" aria-hidden="true">OP</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="projects.html" aria-current="page">Projects</a>
+      <a class="nav__link" href="research.html">Research</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--ghost btn--sm" href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn btn--ghost btn--sm" href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <button class="burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <a class="mobile-menu__link" href="index.html">Home</a>
+  <a class="mobile-menu__link" href="about.html">About</a>
+  <a class="mobile-menu__link" href="projects.html" aria-current="page">Projects</a>
+  <a class="mobile-menu__link" href="research.html">Research</a>
+  <a class="mobile-menu__link" href="contact.html">Contact</a>
+  <div class="mobile-menu__btns">
+    <a class="btn btn--ghost" href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn btn--ghost" href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs reveal" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span>
+        <a href="projects.html">Projects</a><span aria-hidden="true">/</span>
+        <span>Multi-Store Management System</span>
+      </nav>
+      <div class="cs-head reveal">
+        <div class="badge-row" style="margin-bottom:24px"><span class="badge">Full-stack application</span></div>
+        <h1>Multi-Store Management System</h1>
+        <p class="cs-head__headline">One owner login, three stores, no more notebooks.</p>
+        <ul class="metrics"><li class="metric"><b>2</b> roles</li><li class="metric"><b>3</b> stores</li><li class="metric"><b>Salaries hidden</b> at API level</li></ul>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn btn--ghost" href="https://github.com/OmPatil2806/multi-store-management-system" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> View on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" style="padding-top:72px">
+    <figure class="diagram reveal"><svg viewBox="0 0 1178 150" role="img" aria-label="Identity and store are derived from the token, never from the client" preserveAspectRatio="xMinYMid meet"><rect x="0" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="84.0" y="70.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">Login</text><text x="84.0" y="88.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">(JWT)</text><text x="10" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">01</text><line x1="174" y1="74.0" x2="192" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M192 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="202" y="38" width="168" height="72" rx="8" fill="rgba(184,15,45,0.06)" stroke="#B80F2D" stroke-width="1.8"/><text x="286.0" y="70.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="600" fill="#B80F2D">Identity + store</text><text x="286.0" y="88.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="600" fill="#B80F2D">from token</text><text x="212" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">02</text><line x1="376" y1="74.0" x2="394" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M394 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="404" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="488.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">FastAPI</text><text x="414" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">03</text><line x1="578" y1="74.0" x2="596" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M596 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="606" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="690.0" y="79.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">SQLite</text><text x="616" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">04</text><line x1="780" y1="74.0" x2="798" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M798 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="808" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="892.0" y="70.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">React</text><text x="892.0" y="88.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">dashboard</text><text x="818" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">05</text><line x1="982" y1="74.0" x2="1000" y2="74.0" stroke="rgba(60,45,30,0.32)" stroke-width="1"/><path d="M1000 74.0 l-6 -3.5 v7 z" fill="rgba(60,45,30,0.45)"/><rect x="1010" y="38" width="168" height="72" rx="8" fill="#FFFDF9" stroke="rgba(60,45,30,0.30)" stroke-width="1"/><text x="1094.0" y="70.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">.xlsx</text><text x="1094.0" y="88.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="13.5" font-weight="500" fill="#221E1A">export</text><text x="1020" y="26" font-family="JetBrains Mono, monospace" font-size="10.5" letter-spacing="1.6" fill="#6E655B">06</text></svg><figcaption>Identity and store are derived from the token, never from the client</figcaption></figure>
+  </div>
+
+<section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Problem</h2><div class="prose" style="max-width:none"><p>An owner running a grocery, a clothing and an electronics store was tracking stock, sales and payroll across three sets of notebooks. This replaces them with one application that runs locally on the store network.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Data</h2><div class="prose" style="max-width:none"><div class="spec"><div class="spec__row"><div class="spec__k">Tenancy</div><div class="spec__v"><b>3 stores</b> — grocery, clothing, electronics — under one owner login.</div></div><div class="spec__row"><div class="spec__k">Roles</div><div class="spec__v"><b>2</b> — owner and employee, with separate logins.</div></div><div class="spec__row"><div class="spec__k">Deployment</div><div class="spec__v">Runs locally on the store network.</div></div></div></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Approach</h2><div class="prose" style="max-width:none"><ul><li>Per-store inventory with owner-only price control and low-stock flags.</li><li>Cart checkout taking cash, card, UPI or other, with an atomic stock decrement.</li><li>Employee codes such as <b>GRO-0004</b>; deactivating an employee invalidates their tokens.</li><li>Dashboards for revenue, top products, stock value and payment mix, built with Recharts.</li><li>One-click formatted <b>.xlsx</b> export, per store or across all stores.</li></ul></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Results</h2><div class="prose" style="max-width:none"><div class="note"><div class="note__k">Security design</div><p>Identity and store are derived from the JWT, and a client-sent <code>store_id</code> is ignored outright. Salary is removed in the <b>response schema</b>, not merely hidden in the UI — an employee calling the API directly still cannot read it.</p></div><p>This project is a working application rather than a measured experiment, so there is no benchmark comparison to show here. The numbers that describe it are in the data section above.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Limitations<br>&amp; honest notes</h2><div class="prose" style="max-width:none"><ul><li>Built for a single owner with three stores; it is not a general multi-tenant SaaS.</li><li>Runs locally on the store network, so there is no hosted deployment or live demo.</li><li>SQLite is sufficient at this scale and would need replacing for concurrent multi-site use.</li></ul></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Stack</h2><div class="prose" style="max-width:none"><div class="tags"><span class="tag">FastAPI</span><span class="tag">SQLAlchemy</span><span class="tag">SQLite</span><span class="tag">JWT</span><span class="tag">bcrypt</span><span class="tag">pandas</span><span class="tag">openpyxl</span><span class="tag">React (Vite)</span><span class="tag">Tailwind v4</span><span class="tag">shadcn/ui</span><span class="tag">Recharts</span></div></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Dashboard</h2><div class="prose" style="max-width:none"><div class="shots reveal"><div class="shot"><span class="shot__ph">Owner dashboard<br>assets/img/projects/multi-store-1.png</span></div><div class="shot"><span class="shot__ph">Inventory<br>assets/img/projects/multi-store-2.png</span></div><div class="shot"><span class="shot__ph">Checkout<br>assets/img/projects/multi-store-3.png</span></div></div><p class="mono" style="font-size:11.5px;color:var(--muted);margin-top:18px">Screenshot slots — drop the files in at the paths shown.</p></div></div></div></section><section class="cs-section"><div class="wrap"><div class="cs-grid"><h2>Links</h2><div class="prose" style="max-width:none"><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--solid" href="https://github.com/OmPatil2806/multi-store-management-system" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg> Repository</a></div></div></div></div></section>
+  <nav class="pager" aria-label="Project navigation">
+    <a class="pager__item" href="fincast.html"><div class="pager__k">Previous</div><div class="pager__t">FinCast</div></a>
+    <a class="pager__item pager__item--next" href="smart-grid.html"><div class="pager__k">Next</div><div class="pager__t">Smart Grid Electric Load Forecasting</div></a>
+  </nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__word">Om Patil<br><span>AI Engineer &amp; Data Scientist</span></p>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <ul class="footer__list">
+          <li><a href="https://github.com/OmPatil2806" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/om-patil-039863369/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="mailto:ompatil24@zohomail.in">ompatil24@zohomail.in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Based in</h4>
+        <ul class="footer__list">
+          <li><span>Neckarsulm, Germany</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Personal portfolio. Not affiliated with AUDI AG.</span>
+      <span>&copy; <span data-year>2026</span> Om Patil</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
