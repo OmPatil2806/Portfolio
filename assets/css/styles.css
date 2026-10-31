@@ -219,6 +219,9 @@ strong { font-weight: 600; color: var(--text); }
 .tlink:hover::after { transform: scaleX(1); }
 .tlink .arr { transition: transform 0.3s var(--ease); }
 .tlink:hover .arr { transform: translateX(4px); }
+.card__foot .tlink { font-weight: 700; font-size: 13px; color: var(--accent); }
+.card:hover .card__foot .tlink::after { transform: scaleX(1); }
+.card:hover .card__foot .tlink .arr { transform: translateX(4px); }
 
 /* ---------------------------------------------------------------- Header */
 .header {
